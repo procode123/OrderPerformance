@@ -28,13 +28,16 @@ public class InitialExecution {
 	public static void main(String[] args) {
 
 		long startTimeInNano = System.nanoTime();
+		long startTimeInMilli = System.currentTimeMillis();
 		getOrdersWithTaxValueWithOutPeformanceEnhancer();
 		long endTimeInNano = System.nanoTime();
-
+		long endTimeInMilli = System.currentTimeMillis();
 		System.out
 				.println("===================================================================");
 		System.out.println("Initial Execution took "
 				+ (endTimeInNano - startTimeInNano) + " nanoseconds");
+		System.out.println("Initial Execution took "
+				+ (endTimeInMilli - startTimeInMilli) + " milliseconds");
 		System.out
 				.println("===================================================================");
 	}
@@ -62,8 +65,6 @@ public class InitialExecution {
 				.setTaxToBePaidForEachOrder(
 						orderListWithPriceOfItemAndOrderTotal, taxRateList);
 
-		// -----Comment Block-----Start
-
 		StringBuilder sb = new StringBuilder();
 		for (Order order : finalOrderList) {
 			sb.append("orderNumber is : " + order.getOrderNumber() + "\n");
@@ -74,12 +75,10 @@ public class InitialExecution {
 			sb.append("taxToBePaid is :"
 					+ order.getTaxToBePaid().setScale(2, RoundingMode.CEILING)
 					+ "\n");
-			sb.append("===================================================================");
+			sb.append("==================================================================="
+					+ "\n");
 		}
 		System.out.println(sb.toString());
-
-		// -----Comment Block-----End
-
 	}
 
 }

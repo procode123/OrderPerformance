@@ -1,10 +1,12 @@
 Code to be executed
 ========================
 
-1.InitialExecution.java  as it is
+1.Run InitialExecution.java 
 
-2.InitialExecution.java with comment Block Turned On - We are doing this since the executor service code is not using it.
+2.Note the results in console
 
-3.UsingExecutorService.java showing how ExecutorService Helped in increasing the performance.
+3.Run UsingThreads.java (This runs 2 Threads in Parallel increasing performance)
 
-4.Check the TaskResults.txt for Results.
+4.Note the results in console.
+
+5.Check the TaskResults.txt showing Results of my executions
